@@ -1,6 +1,6 @@
 package com.nam.cafe.dao;
 
-import com.nam.cafe.POJO.User;
+import com.nam.cafe.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 
