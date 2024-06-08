@@ -7,6 +7,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 
+@NamedQuery(name="User.getAllUsers", query="SELECT new com.nam.cafe.wrapper.UserWrapper(u.id, u.name, u.email, u.contactNumber, u.status) FROM User u where u.role = 'USER'")
+@NamedQuery(name="User.updateStatus", query="UPDATE User u SET u.status = :status WHERE u.id = :id")
+@NamedQuery(name="User.getAllAdmins", query="SELECT u.email FROM User u where u.role = 'ADMIN'")
+
 @Getter
 @Setter
 @ToString
